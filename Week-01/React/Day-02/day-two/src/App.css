@@ -2,33 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
-}
-
-.container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1, h2 {
+  background: #edf2f7;
   color: #333;
-}
-
-.date {
-  font-style: italic;
-  color: #555;
-}
-
-ul {
-  padding-left: 20px;
-}
-
-blockquote {
-  font-style: italic;
-  color: #0066cc;
-  border-left: 4px solid #ccc;
-  padding-left: 1rem;
 }
 
 .nav {
@@ -36,20 +11,58 @@ blockquote {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding-top: 1rem;
+  padding: 1rem;
+  margin: 0;
+  background: #0077cc;
 }
 
 .nav a {
   text-decoration: none;
-  color: #0077cc;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
 }
 
-@media (max-width: 600px) {
-  .container {
-    padding: 1rem;
-  }
-  .nav {
-    flex-direction: column;
-    align-items: center;
-  }
+.nav a:hover {
+  background: #005fa3;
+  border-radius: 5px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  box-shadow: 0 0 10px #0003;
+  border-radius: 10px;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0077cc;
+  color: #ffffff;
+  margin-top: 2rem;
+  position: fixed;
+  bottom: 0;
+  width: 1800px;
+}
+
+.side {
+  width: 150px;
+  background: wheat;
+  color: #333;
+  padding: 1rem;
+  float: left;
+  height: 800vh;
+}
+
+.container {
+  margin-left: 220px;
+  padding: 2rem;
+}
+
+.app-wrapper{
+  display: flex;
+  height: 100vh;
 }

@@ -1,0 +1,28 @@
+.profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  padding: 2rem;
+}
+
+.profile-card {
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #f9f9f9;
+  margin: 0;
+}
+
+.header img {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact p {
+  margin-bottom: 0.5rem;
+}

@@ -1,26 +1,25 @@
 import React from "react";
-import Navbar from "./components/NavBar";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Sidebar from "./components/SideBar";
+import "./App.css";
+import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
+import SideBar from "./components/SideBar";
 
-const App = () => {
-  const isMobile = window.innerWidth < 640;
-
+function App() {
   return (
     <>
-      <Navbar />
-      <main className="flex flex-col md:flex-row">
-        <section className="flex-1">
-          <Hero />
-          <Features />
-        </section>
-        <Sidebar showWidget={!isMobile} />
-      </main>
+      <NavBar />
+      
+      <div className="app-wrapper">
+        <SideBar />
+        <div className="container">
+          
+          <h1>Welcome to ReactSite!</h1>
+        </div>
+      </div>
+      
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default App;

@@ -1,0 +1,10 @@
+/* ProductCard.module.css */
+.card {
+  padding: 20px;
+  background: #f9f9f9;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+}

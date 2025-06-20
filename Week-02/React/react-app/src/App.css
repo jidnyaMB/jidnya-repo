@@ -6,9 +6,13 @@
  
 }
 body{
- background-image: url("assets/wrtiting-tools.jpg");
+ /* background-image: url("assets/wrtiting-tools.jpg"); */
+ background-image: url("assets/rickmorty.jpg"); 
  background-repeat: no-repeat;
  background-size: cover;
+   font-family: Arial, Helvetica, sans-serif;
+   color: #4caf50;
+   font-size: larger;
 }
 
 .completed-text {

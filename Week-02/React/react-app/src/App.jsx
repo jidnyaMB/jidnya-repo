@@ -1,7 +1,5 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
+import RickAndMortyApp from './components/Rickandmorty'
 import Todoform from './components/Todoform'
 import TravelBuddy from './components/TravelBuddy'
 
@@ -12,7 +10,8 @@ function App() {
     <>
       <div>
         {/* <TravelBuddy/> */}
-        <Todoform/>
+        {/* <Todoform/> */}
+        <RickAndMortyApp />
       </div>
       
     </>

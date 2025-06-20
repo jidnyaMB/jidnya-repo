@@ -66,9 +66,9 @@ function TodoForm() {
           >
             <p className={todo.completed ? "completed-text" : ""}>{todo.text}</p>
             <div className="buttons">
-              <button onClick={() => handleComplete(todo.id)}>✔️ Complete</button>
-              <button onClick={() => handleEdit(todo)}>✏️ Update</button>
-              <button onClick={() => handleDelete(todo.id)}>❌ Delete</button>
+              <button onClick={() => handleComplete(todo.id)}>Complete</button>
+              <button onClick={() => handleEdit(todo)}>Update</button>
+              <button onClick={() => handleDelete(todo.id)}>Delete</button>
             </div>
           </div>
         ))}

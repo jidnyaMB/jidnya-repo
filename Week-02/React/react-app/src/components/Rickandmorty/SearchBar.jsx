@@ -1,24 +1,26 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ onSearch }) => {
-  const [input, setInput] = useState('');
+function SearchBar({ onSubmit }) {
+  const [term, setTerm] = useState('');
 
-  const handleClick = () => {
-    onSearch(input);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (term.trim()) {
+      onSubmit(term);
+    }
   };
 
   return (
-    <div>
-        <label>Please enter a character to view images!</label><br/><br/>
+    <form onSubmit={handleSubmit} className="search-bar">
       <input
         type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Search character"
-      /> <br/> <br/>
-      <button onClick={handleClick}>Search</button>
-    </div>
+        placeholder="Search characters..."
+        value={term}
+        onChange={(e) => setTerm(e.target.value)}
+      />
+      <button type="submit">Search</button>
+    </form>
   );
-};
+}
 
 export default SearchBar;

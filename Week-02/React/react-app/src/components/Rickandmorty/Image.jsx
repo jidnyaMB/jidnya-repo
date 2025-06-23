@@ -1,14 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import getCharacters from './api';
+import ImageShow from './ImageShow';
+import './ImageStyle.css';
 
-const Image = ({ character }) => {
+function Image({ term }) {
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    if (term) {
+      getCharacters(term).then(setResults);
+    }
+  }, [term]);
+
   return (
-    <div>
-      <img src={character.image} alt={character.name} 
-      style={{ width: '150px', height: '150px', borderRadius: '8px' }}
-      />
-      <p>{character.name}</p>
+    <div className="grid-container">
+      {results.map((character) => (
+        <ImageShow key={character.id} character={character} />
+      ))}
     </div>
   );
-};
+}
 
 export default Image;

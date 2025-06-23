@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
 import SearchBar from './SearchBar';
-import ImageShow from './ImageShow';
-import { fetchCharactersByName } from './api';
+import Image from './Image';
+import './ImageStyle.css';
 
-const RickAndMortyApp = () => {
-  const [characters, setCharacters] = useState([]);
-  const [error, setError] = useState('');
+function RickAndMortyApp() {
+  const [term, setTerm] = useState('');
+  const [hasSearched, setHasSearched] = useState(false);
 
-  const handleSearch = async (name) => {
-    try {
-      const data = await fetchCharactersByName(name);
-      setCharacters(data);
-      setError('');
-    } catch (err) {
-      setCharacters([]);
-      setError(err.message);
-    }
+  const handleSearch = (value) => {
+    setTerm(value);
+    setHasSearched(true);
   };
 
   return (
-    <div>
-      <SearchBar onSearch={handleSearch} />
-      {error && <p>{error}</p>}
-      <ImageShow characters={characters} />
+    <div className="app-wrapper">
+    <div >
+      <div className="search-wrapper">
+        <SearchBar onSubmit={handleSearch} />
+      </div>
+
+      {hasSearched && (
+        <div className="image-results">
+          <Image term={term} />
+        </div>
+      )}
+    </div>
     </div>
   );
-};
+}
 
 export default RickAndMortyApp;

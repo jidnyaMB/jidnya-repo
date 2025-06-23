@@ -1,15 +1,15 @@
 import React from 'react';
-import Image from './Image';
 
-const ImageShow = ({ characters }) => {
-
+function ImageShow({ character }) {
   return (
-    <div>
-      {characters.map((char) => (
-        <Image key={char.id} character={char} />
-      ))}
+    <div className="image-card">
+      <img src={character.image} alt={character.name} />
+      <h3>{character.name}</h3>
+      <p><strong>Status:</strong> {character.status}</p>
+      <p><strong>Species:</strong> {character.species}</p>
+      <p><strong>Origin:</strong> {character.origin.name}</p>
     </div>
   );
-};
+}
 
 export default ImageShow;

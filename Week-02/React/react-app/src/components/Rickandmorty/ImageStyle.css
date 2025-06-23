@@ -1,0 +1,162 @@
+html,body{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+.app-scroll-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* padding: 20px; */
+  box-sizing: border-box;
+}
+
+.top-search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-results {
+  flex: 1;
+  width: 100%;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 550px;
+  padding: 10px;
+   background: rgba(255, 255, 255, 0.1); 
+  border: 2px solid #4caf50;   
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+   backdrop-filter: blur(5px);
+  gap: 10px;
+   box-sizing: border-box;
+   font-size: 0.85rem;             
+  transform: scale(0.7); 
+}
+
+/* The Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 0 20px 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.left-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;    /* top align */
+  align-items: flex-start;        /* left align */
+  min-height: 100vh;
+  height: auto;                   /* Allow height to grow */
+  position: relative;             /* 🔄 Remove sticky if not needed */
+  top: 0;
+  padding-top: 20px;
+}
+
+/* Each Character Card */
+.image-card {
+  /* width: 180px; */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 0.65rem; 
+}
+
+/* Character Image */
+.image-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Search input and button */
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  color: #ccc;
+   background: rgba(0, 0, 0, 0.3);
+   box-sizing: border-box;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+}
+.app-scroll {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.app-top-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  min-height: 100vh;         /* Allow full height */
+  box-sizing: border-box;
+}
+
+.search-bar button {
+  padding: 8px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #388e3c; /* darker green on hover */
+}
+.app-center-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* Top layout after search */
+.app-top-layout {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+  /* min-height: 100vh; */
+  height: auto;
+}
+
+/* Search bar wrapper (works in both modes) */
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.app-center-layout .search-wrapper {
+  justify-content: center;
+}
+
+.app-wrapper{
+
+  padding: 0;
+}

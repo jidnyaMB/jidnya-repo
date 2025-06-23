@@ -3,21 +3,37 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
- 
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
-body{
+html, body{
+   margin: 0;
+  padding: 0;
+  height: 100%;
  /* background-image: url("assets/wrtiting-tools.jpg"); */
- background-image: url("assets/rickmorty.jpg"); 
+ background-image: url("assets/rick.png"); 
  background-repeat: no-repeat;
  background-size: cover;
    font-family: Arial, Helvetica, sans-serif;
    color: #4caf50;
    font-size: larger;
+   /* overflow: hidden; */
+   overflow-y: auto;
+   overflow-x: hidden;
 }
 
 .completed-text {
   text-decoration: line-through;
   color: gray;
+}
+.main-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;  /* Push content to the left */
+  padding: 20px;
+  gap: 30px;
+  width: 100%;
 }
 
 .logo {

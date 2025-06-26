@@ -14,11 +14,9 @@ function RickAndMortyApp() {
 
   return (
     <div className="main">
-      <div className="heading">
-         <h2> The Rick & Morty</h2>
-      </div>
-      <h2 style={{ color: "black", textAlign: "center" }}>Welcome to the Multiverse Explorer!</h2>
-      <h3 style={{ color: "black", textAlign: "center" }}>Search for your favorite Rick and Morty characters using the bar above.</h3>
+     <br/><br/><br/><br/>
+      <p style={{ color: "black", textAlign: "center" , fontSize: '22px'}}>Welcome to the Multiverse Explorer!</p>
+      <p style={{ color: "black", textAlign: "center" , fontSize: '18px'}}>Search for your favorite Rick and Morty characters using the bar below.</p>
 
 
       <div className="app-wrapper">

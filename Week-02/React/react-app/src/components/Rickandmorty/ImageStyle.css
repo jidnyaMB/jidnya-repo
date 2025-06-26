@@ -57,18 +57,15 @@ html,body{
   padding: 18px;
   /* background: rgba(255, 255, 255, 0.1);  */
   border: 1px solid black;   
-  border-radius: 9999px;
+  border-radius: 3px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* display: flex;                  
-  align-items: center;
-  justify-content: space-between; */
   display: flex;
   gap: 10px;
   font-family: 'Alata';
   backdrop-filter: blur(5px);
   box-sizing: border-box;
   font-size: 0.85rem;
-  margin-top: 120px;
+  margin-top: 30px;
 }
 
 
@@ -104,6 +101,7 @@ html,body{
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-size: 0.65rem; 
   color: black;
+  margin-top: 60px;
 }
 
 /* Character Image */
@@ -115,20 +113,20 @@ html,body{
 
 /* Search input and button */
 .search-bar input {
-  flex: 1;                         /* 🟢 Takes full available space */
+  flex: 1;                         
   padding: 10px 16px;
-  color: white;
-  background: rgba(0, 0, 0, 0.3);
+  color: #333;
+  background: rgba(174, 173, 173, 0.3);
   box-sizing: border-box;
   font-size: 0.8rem;
   border: 1px solid black;
-  border-radius: 9999px;          /* 🟢 Fully rounded */
+  border-radius: 3px;         
   outline: none;
   height: 38px;
 }
 
 .search-bar input::placeholder {
-  color: white;
+  color: black;
   opacity: 1;
 }
 .app-scroll {
@@ -144,7 +142,7 @@ html,body{
   flex-direction: column;
   padding: 20px;
   gap: 20px;
-  min-height: 100vh;         /* Allow full height */
+  min-height: 100vh;         
   box-sizing: border-box;
 }
 
@@ -154,7 +152,7 @@ html,body{
   background-color: black;
   color: white;
   border: none;
-  border-radius: 9999px;          /* 🟢 Fully rounded */
+  border-radius: 3px;         
   cursor: pointer;
   font-size: 0.8rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
@@ -177,11 +175,9 @@ html,body{
   flex-direction: column;
   padding: 20px;
   gap: 20px;
-  /* min-height: 100vh; */
   height: auto;
 }
 
-/* Search bar wrapper (works in both modes) */
 .search-wrapper {
   display: flex;
   justify-content: center;
@@ -195,4 +191,31 @@ html,body{
 .app-wrapper{
 
   padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #333;
+  color: white;
+  font-size: 17px;
+}
+
+.navbar-left {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+  color: #c1c1c1;
 }
